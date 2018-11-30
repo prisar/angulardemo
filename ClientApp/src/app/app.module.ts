@@ -28,7 +28,6 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'employees', component: EmployeeListComponent },
     ])
