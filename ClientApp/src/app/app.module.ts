@@ -38,7 +38,6 @@ import { AddmovieComponent } from './components/addmovie/addmovie.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'employees', component: EmployeeListComponent },
       { path: 'movies', component: MoviesComponent },
       { path: 'editmovie/:id', component: EditMovieComponent },

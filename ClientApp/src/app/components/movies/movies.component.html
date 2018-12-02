@@ -11,16 +11,23 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
+      <th>Year</th>
       <th>Plot</th>
-      <th>Action</th>
+      <th>Poster</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let movie of movies">
       <td>{{ movie.id }}</td>
       <td>{{ movie.name }}</td>
+      <td>{{ movie.yearOfRelease }}</td>
       <td>{{ movie.plot }}</td>
-      <td><a [routerLink]="['/editmovie', movie.id]">Edit</a></td>
+      <td>{{ movie.poster }}</td>
+      <td>
+        <a [routerLink]="['/editmovie', movie.id]">Edit</a>
+        <a (click)="deleteMovie(movie.id)">Delete</a>
+    </td>
     </tr>
   </tbody>
 </table>

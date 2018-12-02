@@ -27,4 +27,15 @@ export class MoviesComponent implements OnInit {
   onEdit() {
     alert('Edit movie');
   }
+
+  deleteMovie(movieId: number): void {
+    this.movieService.deleteMovie(movieId)
+      .subscribe(
+        (data: void) => {
+          let index: number = this.movies.findIndex(movie => movie.id === movieId);
+          this.movies.splice(index, 1);
+        },
+        (err: any) => console.log(err)
+      );    
+  }
 }
