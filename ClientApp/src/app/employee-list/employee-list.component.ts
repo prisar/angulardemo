@@ -14,9 +14,15 @@ export class EmployeeListComponent implements OnInit {
     {'id':4, 'name': 'Elena', 'age': 30},
   ]
 
+  public editMessage = '';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onEdit() {
+    this.editMessage = 'Edit employee details';
+    alert(this.editMessage);
+  }
 }
