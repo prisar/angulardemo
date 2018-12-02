@@ -3,7 +3,7 @@
 <p *ngIf="!movies">Loading...</p>
 
 <div *ngIf="movies">
-    <button>Add Movie</button>
+    <button><a [routerLink]="['/addmovie']">Add</a></button>
     <br>
     <br>
 <table class='table table-striped table-condensed table-bordered'>

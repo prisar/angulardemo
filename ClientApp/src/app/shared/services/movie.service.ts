@@ -28,4 +28,12 @@ export class MovieService {
             })
         });
     }
+
+    addMovie(newMovie: Movie): Observable<Movie> {
+        return this.http.post<Movie>('https://dxmoviesapi.azurewebsites.net/api/v1/movies/', newMovie, {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json'
+          })
+        });
+    }
 }

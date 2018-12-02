@@ -16,6 +16,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './shared/services/movie.service';
 import { EditMovieComponent } from './components/editmovie/editmovie.component';
+import { AddmovieComponent } from './components/addmovie/addmovie.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EditMovieComponent } from './components/editmovie/editmovie.component';
     TestComponent,
     EmployeeListComponent,
     MoviesComponent,
-    EditMovieComponent
+    EditMovieComponent,
+    AddmovieComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,6 +42,7 @@ import { EditMovieComponent } from './components/editmovie/editmovie.component';
       { path: 'employees', component: EmployeeListComponent },
       { path: 'movies', component: MoviesComponent },
       { path: 'editmovie/:id', component: EditMovieComponent },
+      { path: 'addmovie', component: AddmovieComponent },
     ])
   ],
   providers: [MovieService],

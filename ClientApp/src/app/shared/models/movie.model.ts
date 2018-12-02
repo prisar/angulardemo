@@ -1,7 +1,7 @@
 export class Movie {
     id: number;
     name: string;
-    yearOfRelease: Date;
+    yearOfRelease: string;
     plot: string;
     poster: string;
 }
