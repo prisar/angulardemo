@@ -15,6 +15,7 @@ import { TestComponent } from './test/test.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './shared/services/movie.service';
+import { EditMovieComponent } from './components/editmovie/editmovie.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MovieService } from './shared/services/movie.service';
     FetchDataComponent,
     TestComponent,
     EmployeeListComponent,
-    MoviesComponent
+    MoviesComponent,
+    EditMovieComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,6 +39,7 @@ import { MovieService } from './shared/services/movie.service';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'employees', component: EmployeeListComponent },
       { path: 'movies', component: MoviesComponent },
+      { path: 'editmovie/:id', component: EditMovieComponent },
     ])
   ],
   providers: [MovieService],

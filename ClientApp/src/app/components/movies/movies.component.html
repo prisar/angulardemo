@@ -20,7 +20,7 @@
       <td>{{ movie.id }}</td>
       <td>{{ movie.name }}</td>
       <td>{{ movie.plot }}</td>
-      <td><button (click)="onEdit()">Edit</button></td>
+      <td><a [routerLink]="['/editmovie', movie.id]">Edit</a></td>
     </tr>
   </tbody>
 </table>
