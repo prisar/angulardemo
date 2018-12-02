@@ -16,6 +16,7 @@ export class MovieService {
         //     { id: 2, name: 'Batman Returns', yearOfRelease: '2018-12-02T19:47:55.845Z', "plot":"string","poster":"string"},
         // ];
 
-        return this.http.get<Movie[]>('http://dxmoviesapi.azurewebsites.net/api/v1/movies');;
+        console.log('Movies..');
+        return this.http.get<Movie[]>('https://dxmoviesapi.azurewebsites.net/api/v1/movies');;
     }
 }
