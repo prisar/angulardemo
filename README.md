@@ -22,3 +22,17 @@
 6. Create navigation menu
 
     ng generate @angular/material:material-nav --name components/nav-menu
+
+7. Create dashboard component
+
+    ng generate @angular/material:material-dashboard --name components/dashboard
+
+8. Renamed components folder to core. https://medium.com/@michelestieven/organizing-angular-applications-f0510761d65a
+
+9. Create movie service
+
+    ng generate service shared/services/movie
+
+10. Create movie model
+
+    ng generate class shared/models/movie --type=model
