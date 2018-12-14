@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MovieService } from './shared/services/movie.service';
 import { MoviesComponent } from './views/movies/movies.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MoviesComponent } from './views/movies/movies.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
