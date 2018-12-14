@@ -7,7 +7,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ClientApp';
+  title = 'Demo';
 
   items = ['First', 'Second', 'Third', 'Fourth'];
  

@@ -36,3 +36,8 @@
 10. Create movie model
 
     ng generate class shared/models/movie --type=model
+
+11. Create component
+
+    ng generate component views/movies
+
