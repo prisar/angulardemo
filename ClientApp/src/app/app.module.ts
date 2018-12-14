@@ -6,17 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MovieService } from './shared/services/movie.service';
-
+import { MoviesComponent } from './views/movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
-    DashboardComponent
+    DashboardComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { MovieService } from './shared/services/movie.service';
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
