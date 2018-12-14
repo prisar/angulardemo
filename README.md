@@ -18,3 +18,7 @@
 5. Installed Material Design
 
     npm install --save @angular/material @angular/cdk @angular/animations
+
+6. Create navigation menu
+
+    ng generate @angular/material:material-nav --name components/nav-menu
