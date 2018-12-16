@@ -1,0 +1,24 @@
+<div class="details">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="selectedMovie && selectedMovie.name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Year" [(ngModel)]="selectedMovie && selectedMovie.yearOfRelease">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Plot" [(ngModel)]="selectedMovie && selectedMovie.plot" required>
+      <mat-option value="Animation">Animation</mat-option>
+      <mat-option value="Drama">Drama</mat-option>
+      <mat-option value="Science Fiction">Science Fiction</mat-option>
+      <mat-option value="Other">Other</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Poster Url" [(ngModel)]="selectedMovie && selectedMovie.poster">
+  </mat-form-field>
+</div>
+<button mat-raised-button color="primary" type="submit" (click)="saveChanges()">Submit</button>
+

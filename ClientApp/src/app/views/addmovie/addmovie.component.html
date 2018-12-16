@@ -1,0 +1,29 @@
+<div class="details">
+  <form #addMovieForm="ngForm" (ngSubmit)="saveMovie(addMovieForm.value)">
+    <legend>Add New Movie</legend>
+
+    <mat-form-field>
+      <input matInput id="inputName" placeholder="Name" [(ngModel)]="selectedMovie && selectedMovie.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput id="inputYear" placeholder="Year" [(ngModel)]="selectedMovie && selectedMovie.yearOfRelease" name="yearOfRelease">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select id="inputPlot" placeholder="Plot" [(ngModel)]="selectedMovie && selectedMovie.plot" name="plot"
+        required>
+        <mat-option value="Animation">Animation</mat-option>
+        <mat-option value="Drama">Drama</mat-option>
+        <mat-option value="Science Fiction">Science Fiction</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input id="inputPoster" matInput placeholder="Poster Url" [(ngModel)]="selectedMovie && selectedMovie.poster"
+        name="poster">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </form>
+</div>

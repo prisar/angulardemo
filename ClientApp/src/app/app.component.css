@@ -1,18 +1,7 @@
-/* .box {
-    border: 1px solid black;
-    padding: 20px;
-    width: 200px;
-    background-color:lightblue;
-  }
-   
-  .cdk-drop-dragging .cdk-drag {
-    transition: transform 500ms cubic-bezier(0, 0, 0.2, 1);
-  }
-   
-  .cdk-drag-animating {
-    transition: transform 550ms cubic-bezier(0, 0, 0.2, 1);
-  }
-   
-  .cdk-drag-placeholder {
-    background-color: Highlight;
-  } */
+
+@media (min-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+  .body-content {
+    margin-left: 15%;
+  }  
+}

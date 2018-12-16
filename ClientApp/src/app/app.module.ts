@@ -6,19 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatInputModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MovieService } from './shared/services/movie.service';
 import { MoviesComponent } from './views/movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditmovieComponent } from './views/editmovie/editmovie.component';
+import { AddmovieComponent } from './views/addmovie/addmovie.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     DashboardComponent,
-    MoviesComponent
+    MoviesComponent,
+    EditmovieComponent,
+    AddmovieComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatMenuModule,
     MatTableModule,
-    HttpClientModule
+    MatInputModule,
+    MatSelectModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
