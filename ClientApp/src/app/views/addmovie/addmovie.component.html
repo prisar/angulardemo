@@ -3,15 +3,15 @@
     <legend>Add New Movie</legend>
 
     <mat-form-field>
-      <input matInput id="inputName" placeholder="Name" [(ngModel)]="selectedMovie && selectedMovie.name" name="name">
+      <input matInput id="inputName" placeholder="Name" name="name">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput id="inputYear" placeholder="Year" [(ngModel)]="selectedMovie && selectedMovie.yearOfRelease" name="yearOfRelease">
+      <input matInput id="inputYear" placeholder="Year" name="yearOfRelease">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-select id="inputPlot" placeholder="Plot" [(ngModel)]="selectedMovie && selectedMovie.plot" name="plot"
+      <mat-select id="inputPlot" placeholder="Plot" name="plot"
         required>
         <mat-option value="Animation">Animation</mat-option>
         <mat-option value="Drama">Drama</mat-option>
@@ -21,7 +21,7 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input id="inputPoster" matInput placeholder="Poster Url" [(ngModel)]="selectedMovie && selectedMovie.poster"
+      <input id="inputPoster" matInput placeholder="Poster Url"
         name="poster">
     </mat-form-field>
     <button mat-raised-button color="primary" type="submit">Save</button>

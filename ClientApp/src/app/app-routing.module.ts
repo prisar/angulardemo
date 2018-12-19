@@ -6,7 +6,7 @@ import { AddmovieComponent } from './views/addmovie/addmovie.component';
 import { EditmovieComponent } from './views/editmovie/editmovie.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
   { path: 'movies', component: MoviesComponent },
   { path: 'editmovie/:id', component: EditmovieComponent },
   { path: 'addmovie', component: AddmovieComponent },

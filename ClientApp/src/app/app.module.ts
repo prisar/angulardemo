@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditmovieComponent } from './views/editmovie/editmovie.component';
 import { AddmovieComponent } from './views/addmovie/addmovie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

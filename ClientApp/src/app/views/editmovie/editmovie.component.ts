@@ -16,6 +16,7 @@ export class EditmovieComponent implements OnInit {
     private movieService: MovieService) { }
 
   ngOnInit() {
+    // tslint:disable-next-line:radix
     const movieId: number = parseInt(this.route.snapshot.params['id']);
     this.movieService.getMovieById(movieId)
     .subscribe(

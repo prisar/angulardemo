@@ -41,3 +41,26 @@
 
     ng generate component views/movies
 
+12. Add material design icons
+
+    `npm install material-design-icons --save`
+
+13. Import in style.css file
+
+    `@import '~material-design-icons/iconfont/material-icons.css';`
+
+14. Add pwa settings https://christianlydemann.com/how-to-create-a-progressive-web-app-pwa-with-angular/
+
+    `npm i @angular/pwa@next --save`
+
+15. build
+
+    `nng build --prod`
+
+16. install http-server
+
+    `npm install -g http-server`
+
+17. host from dist folder
+
+    `http-server -c-1 .`
