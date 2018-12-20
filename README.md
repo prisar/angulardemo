@@ -64,3 +64,7 @@
 17. host from dist folder
 
     `http-server -c-1 .`
+
+18. Create shared module for material
+
+    `ng g m shared/material --flat`

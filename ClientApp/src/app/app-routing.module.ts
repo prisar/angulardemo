@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'editmovie/:id', component: EditmovieComponent },
   { path: 'addmovie', component: AddmovieComponent },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
