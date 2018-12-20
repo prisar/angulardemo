@@ -1,4 +1,8 @@
-<div class="details">
+<div *ngIf="!selectedMovie">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="selectedMovie" class="details">
   <mat-form-field>
     <input matInput placeholder="Name" [(ngModel)]="selectedMovie && selectedMovie.name">
   </mat-form-field>

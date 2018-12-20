@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 // tslint:disable-next-line:max-line-length
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatInputModule, MatSelectModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatInputModule, MatSelectModule, MatProgressSpinnerModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MovieService } from './shared/services/movie.service';
@@ -48,7 +48,8 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatProgressSpinnerModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
