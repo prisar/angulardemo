@@ -68,3 +68,7 @@
 18. Create shared module for material
 
     `ng g m shared/material --flat`
+
+19. add hammerjs
+
+    `npm install --save hammerjs`
