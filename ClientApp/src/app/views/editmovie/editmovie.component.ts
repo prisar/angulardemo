@@ -12,6 +12,8 @@ export class EditmovieComponent implements OnInit {
 
   selectedMovie: Movie;
 
+  languages = ['English', 'Hindi', 'Tamil']; // not saved in database
+
   constructor(private route: ActivatedRoute,
     private movieService: MovieService) { }
 
