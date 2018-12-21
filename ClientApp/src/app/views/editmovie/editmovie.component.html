@@ -21,8 +21,8 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select>
-      <mat-option *ngFor="let lang of languages">{{ lang }}</mat-option>
+    <mat-select name="primaryLanguage" [(ngModel)]="primaryLanguage">
+      <mat-option *ngFor="let lang of languages" [value]="lang">{{ lang }}</mat-option>
     </mat-select>
   </mat-form-field>
 
