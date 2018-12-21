@@ -72,3 +72,16 @@
 19. add hammerjs
 
     `npm install --save hammerjs`
+
+20. flex-layut
+
+    `npm install --save @angular/flex-layout`
+
+21. ngrx
+
+    `npm install --save @ngrx/store`
+
+
+22. Oracle ef here
+
+    http://www.oracle.com/technetwork/topics/dotnet/downloads/efcorebeta-5198354.html

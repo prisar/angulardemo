@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Demo';
 
   items = ['First', 'Second', 'Third', 'Fourth'];
- 
+
   onDrop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
   }
