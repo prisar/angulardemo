@@ -90,3 +90,24 @@
 
     `ng config schematics.@schematics/angular:component.styleext scss`
 
+24. ngrx schematics
+
+    `npm install @ngrx/schematics --save-dev`
+
+25. ngrx store
+
+    `npm install @ngrx/store --save`
+
+26. generate state
+
+    `ng generate @ngrx/schematics:store State --root --module app.module.ts`
+
+27. generate reducer
+
+    `ng generate @ngrx/schematics:reducer MovieIds --group`
+
+28. generate action
+
+    `ng generate @ngrx/schematics:action Movieid --group`
+
+29. 
