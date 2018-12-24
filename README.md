@@ -85,3 +85,8 @@
 22. Oracle ef here
 
     http://www.oracle.com/technetwork/topics/dotnet/downloads/efcorebeta-5198354.html
+
+23. css to scss in `angular.json` and change all mention of css file to scss files after runing:
+
+    `ng config schematics.@schematics/angular:component.styleext scss`
+
