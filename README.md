@@ -110,4 +110,20 @@
 
     `ng generate @ngrx/schematics:action Movieid --group`
 
-29. 
+29. add store devtools
+
+    `npm install @ngrx/store-devtools --save`
+
+30. add effects
+
+    `npm install @ngrx/effects --save`
+
+31. generate effects
+
+    `ng generate @ngrx/schematics:effect CurrentConditions--module app.module --group`
+
+32. add router store
+
+    `npm install @ngrx/router-store --save`
+
+33. 
