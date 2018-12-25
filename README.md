@@ -85,3 +85,45 @@
 22. Oracle ef here
 
     http://www.oracle.com/technetwork/topics/dotnet/downloads/efcorebeta-5198354.html
+
+23. css to scss in `angular.json` and change all mention of css file to scss files after runing:
+
+    `ng config schematics.@schematics/angular:component.styleext scss`
+
+24. ngrx schematics
+
+    `npm install @ngrx/schematics --save-dev`
+
+25. ngrx store
+
+    `npm install @ngrx/store --save`
+
+26. generate state
+
+    `ng generate @ngrx/schematics:store State --root --module app.module.ts`
+
+27. generate reducer
+
+    `ng generate @ngrx/schematics:reducer MovieIds --group`
+
+28. generate action
+
+    `ng generate @ngrx/schematics:action Movieid --group`
+
+29. add store devtools
+
+    `npm install @ngrx/store-devtools --save`
+
+30. add effects
+
+    `npm install @ngrx/effects --save`
+
+31. generate effects
+
+    `ng generate @ngrx/schematics:effect CurrentConditions--module app.module --group`
+
+32. add router store
+
+    `npm install @ngrx/router-store --save`
+
+33. 
