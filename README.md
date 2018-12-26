@@ -134,4 +134,6 @@
 
     `npm install husky --save-dev`
 
-35. 
+35. hammerjs
+
+    `npm install hammerjs --save`
