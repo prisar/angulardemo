@@ -126,4 +126,12 @@
 
     `npm install @ngrx/router-store --save`
 
-33. 
+33. add pretty-quick formatter and keep
+
+    `npm install --save prettier pretty-quick npm-run-all -D`
+
+34. add husky
+
+    `npm install husky --save-dev`
+
+35. 
