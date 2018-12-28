@@ -5,10 +5,10 @@ import { MovieService } from 'src/app/shared/services/movie.service';
 
 @Component({
   selector: 'app-editmovie',
-  templateUrl: './editmovie.component.html',
-  styleUrls: ['./editmovie.component.scss']
+  templateUrl: './movie-edit.component.html',
+  styleUrls: ['./movie-edit.component.scss']
 })
-export class EditmovieComponent implements OnInit {
+export class MovieEditComponent implements OnInit {
 
   selectedMovie: Movie;
 

@@ -4,15 +4,15 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './views/nav-menu/nav-menu.component';
+import { NavMenuComponent } from './home/nav-menu/nav-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { MovieService } from './shared/services/movie.service';
-import { MoviesComponent } from './views/movies/movies.component';
+import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EditmovieComponent } from './views/editmovie/editmovie.component';
-import { AddmovieComponent } from './views/addmovie/addmovie.component';
+import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
+import { MovieAddComponent } from './movies/movie-add/movie-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -23,9 +23,9 @@ import { MaterialModule } from './shared/material.module';
     AppComponent,
     NavMenuComponent,
     DashboardComponent,
-    MoviesComponent,
-    EditmovieComponent,
-    AddmovieComponent
+    MovieListComponent,
+    MovieEditComponent,
+    MovieAddComponent
   ],
   imports: [
     BrowserModule,

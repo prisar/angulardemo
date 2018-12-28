@@ -4,10 +4,10 @@ import { MovieService } from '../../shared/services/movie.service';
 
 @Component({
   selector: 'app-addmovie',
-  templateUrl: './addmovie.component.html',
-  styleUrls: ['./addmovie.component.scss']
+  templateUrl: './movie-add.component.html',
+  styleUrls: ['./movie-add.component.scss']
 })
-export class AddmovieComponent implements OnInit {
+export class MovieAddComponent implements OnInit {
 
   constructor(private movieService: MovieService) { }
 

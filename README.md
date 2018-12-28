@@ -1,4 +1,3 @@
-
 1. Add material
 
     `npm install --save @angular/material @angular/cdk @angular/animations`
@@ -80,7 +79,6 @@
 21. ngrx
 
     `npm install --save @ngrx/store`
-
 
 22. Oracle ef here
 
