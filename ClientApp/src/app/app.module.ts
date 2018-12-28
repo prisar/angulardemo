@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material.module';
+import { PageNotFoundComponent } from './home/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MaterialModule } from './shared/material.module';
     DashboardComponent,
     MovieListComponent,
     MovieEditComponent,
-    MovieAddComponent
+    MovieAddComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

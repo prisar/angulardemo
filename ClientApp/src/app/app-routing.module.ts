@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { MoviesComponent } from './views/movies/movies.component';
-import { AddmovieComponent } from './views/addmovie/addmovie.component';
-import { EditmovieComponent } from './views/editmovie/editmovie.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
+import { MovieAddComponent } from './movies/movie-add/movie-add.component';
+import { PageNotFoundComponent } from './home/page-not-found.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
-  { path: 'movies', component: MoviesComponent },
-  { path: 'editmovie/:id', component: EditmovieComponent },
-  { path: 'addmovie', component: AddmovieComponent },
-  { path: '**', redirectTo: ''}
+  { path: 'movies', component: MovieListComponent },
+  { path: 'editmovie/:id', component: MovieEditComponent },
+  { path: 'addmovie', component: MovieAddComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
