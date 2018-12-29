@@ -124,4 +124,20 @@
 
     `npm install @ngrx/router-store --save`
 
-33. 
+33. run to add maps
+
+    `npm install --save @types/googlemaps`
+
+34. inside body of index.html after app-root
+
+    `<script async defer src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=geometry,drawing,places" type="text/javascript"></script>`
+
+35. add at top to ts file
+
+    `/// <reference types="@types/googlemaps" />`
+
+36. add types in tsconfig.app.json and tsconfig.spec.json
+
+    `"googlemaps"`
+
+37. 
