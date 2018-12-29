@@ -1,1 +1,8 @@
+<mat-form-field>
+  <input matInput type="text" [(ngModel)]="locationStr" />
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="findLocation($event)">
+  <mat-icon>pin_drop</mat-icon>
+</button>
+<div>{{ latitude }} , {{ longitude }}</div>
 <div #gmap style="width:100%;height:400px"></div>
