@@ -18,6 +18,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material.module';
 import { PageNotFoundComponent } from './home/page-not-found.component';
+import { LocationComponent } from './maps/location/location.component';
+import { LocationSearchComponent } from './maps/location-search/location-search.component';
+import { GooglePlacesDirective } from './maps/google-places.directive';
+import { AutocompleteComponent } from './maps/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
     MovieListComponent,
     MovieEditComponent,
     MovieAddComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LocationComponent,
+    LocationSearchComponent,
+    GooglePlacesDirective,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,7 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

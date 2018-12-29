@@ -1,0 +1,12 @@
+<h4 class="title">Selected address:</h4>
+<h4 class="subtitle" *ngIf = "selectedAddress">{{selectedAddress}}</h4>
+<div>{{ placeId }}</div>
+<app-autocomplete 
+        [API_KEY] = "API_KEY"
+        [language] = "'en'"
+        [location] = "['19.109515599999998', '72.99889329999999']"
+        [radius] = "50000"
+        [strictbounds] = "false"
+        (giveBack) = "setSelectedAddress($event)">
+
+        
