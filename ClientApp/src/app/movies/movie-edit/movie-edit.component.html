@@ -1,18 +1,28 @@
-<div *ngIf="!selectedMovie">
-  <mat-spinner></mat-spinner>
-</div>
+<div *ngIf="!selectedMovie"><mat-spinner></mat-spinner></div>
 
 <div *ngIf="selectedMovie" class="details">
   <mat-form-field>
-    <input matInput placeholder="Name" [(ngModel)]="selectedMovie && selectedMovie.name">
+    <input
+      matInput
+      placeholder="Name"
+      [(ngModel)]="selectedMovie && selectedMovie.name"
+    />
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Year" [(ngModel)]="selectedMovie && selectedMovie.yearOfRelease">
+    <input
+      matInput
+      placeholder="Year"
+      [(ngModel)]="selectedMovie && selectedMovie.yearOfRelease"
+    />
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="Plot" [(ngModel)]="selectedMovie && selectedMovie.plot" required>
+    <mat-select
+      placeholder="Plot"
+      [(ngModel)]="selectedMovie && selectedMovie.plot"
+      required
+    >
       <mat-option value="Animation">Animation</mat-option>
       <mat-option value="Drama">Drama</mat-option>
       <mat-option value="Science Fiction">Science Fiction</mat-option>
@@ -22,13 +32,20 @@
 
   <mat-form-field>
     <mat-select name="primaryLanguage" [(ngModel)]="primaryLanguage">
-      <mat-option *ngFor="let lang of languages" [value]="lang">{{ lang }}</mat-option>
+      <mat-option *ngFor="let lang of languages" [value]="lang">{{
+        lang
+      }}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Poster Url" [(ngModel)]="selectedMovie && selectedMovie.poster">
+    <input
+      matInput
+      placeholder="Poster Url"
+      [(ngModel)]="selectedMovie && selectedMovie.poster"
+    />
   </mat-form-field>
 </div>
-<button mat-raised-button color="primary" type="submit" (click)="saveChanges()">Submit</button>
-
+<button mat-raised-button color="primary" type="submit" (click)="saveChanges()">
+  Submit
+</button>
