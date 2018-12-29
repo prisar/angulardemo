@@ -140,16 +140,14 @@
 
     `"googlemaps"`
 
-37. 
-
-38. add pretty-quick formatter and keep
+37. add pretty-quick formatter and keep
 
     `npm install --save prettier pretty-quick npm-run-all -D`
 
-39. add husky
+38. add husky
 
     `npm install husky --save-dev`
 
-40. hammerjs
+39. hammerjs
 
     `npm install hammerjs --save`
