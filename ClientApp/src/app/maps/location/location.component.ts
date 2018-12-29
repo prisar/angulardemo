@@ -21,7 +21,8 @@ export class LocationComponent implements OnInit {
 
   ngOnInit() {
     this.setCurrentPosition();
-    var mapProp = {
+    // tslint:disable-next-line:prefer-const
+    let mapProp = {
       center: new google.maps.LatLng(0, 0),
       zoom: 18,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -37,7 +38,7 @@ export class LocationComponent implements OnInit {
 
   setCurrentPosition() {
     navigator.geolocation.getCurrentPosition(position => {
-      console.log('Set position', position.coords);
+      console.log("Set position", position.coords);
       this.latitude = position.coords.latitude;
       this.longitude = position.coords.longitude;
       this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
@@ -50,14 +51,13 @@ export class LocationComponent implements OnInit {
           position: location,
           map: this.map,
           draggable: false,
-          title: 'You Loation!'
+          title: "You Loation!"
         });
-        this.marker.setLabel('You');
+        this.marker.setLabel("You");
         this.marker.setMap(this.map);
       } else {
         this.marker.setPosition(location);
       }
     });
   }
-
 }

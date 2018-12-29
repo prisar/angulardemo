@@ -14,8 +14,8 @@ export class AutocompleteComponent implements OnInit {
   @Input() strictbounds: boolean;
   @Output() giveBack = new EventEmitter<any>();
 
-  loading: boolean = false;
-  addressInput: string = "";
+  loading = false;
+  addressInput = "";
   predictions: Object[];
   selectedAddress: any;
   errorMessage: string;
@@ -87,8 +87,8 @@ export class AutocompleteComponent implements OnInit {
   }
 
   encodeQuery(data: any) {
-    let ret = [];
-    for (let d in data)
+    const ret = [];
+    for (const d in data)
       ret.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
     return ret.join("&");
   }
