@@ -1,36 +1,36 @@
 1. Add material
 
-    `npm install --save @angular/material @angular/cdk @angular/animations`
+   `npm install --save @angular/material @angular/cdk @angular/animations`
 
 2. Add model
 
-    `ng g class models/employee --type=model`
+   `ng g class models/employee --type=model`
 
 3. Update angular
 
-    `ng update @angular/cli @angular/core`
+   `ng update @angular/cli @angular/core`
 
 4. The above set didnt work well. So, renamed old ClientApp to ClientApp5 and created a new ClientApp using angular-cli which is the latest. I used routing option and css option.
 
-    `ng new ClientApp`
+   `ng new ClientApp`
 
 5. Installed Material Design
 
-    `npm install --save @angular/material @angular/cdk @angular/animations`
+   `npm install --save @angular/material @angular/cdk @angular/animations`
 
 6. Create navigation menu
 
-    `ng generate @angular/material:material-nav --name components/nav-menu`
+   `ng generate @angular/material:material-nav --name components/nav-menu`
 
 7. Create dashboard component
 
-    `ng generate @angular/material:material-dashboard --name components/dashboard`
+   `ng generate @angular/material:material-dashboard --name components/dashboard`
 
 8. Renamed components folder to core. https://medium.com/@michelestieven/organizing-angular-applications-f0510761d65a
 
 9. Create movie service
 
-    `ng generate service shared/services/movie`
+   `ng generate service shared/services/movie`
 
 10. Create movie model
 
@@ -112,42 +112,52 @@
 
     `npm install @ngrx/store-devtools --save`
 
-30. add effects
+30. a) add in app.module
+
+    `StoreDevtoolsModule.instrument({ name: "angular demo devtools", maxAge: 25, logOnly: environment.production })`
+
+31. add effects
 
     `npm install @ngrx/effects --save`
 
-31. generate effects
+32. generate effects
 
     `ng generate @ngrx/schematics:effect CurrentConditions--module app.module --group`
 
-32. add router store
+33. add router store
 
     `npm install @ngrx/router-store --save`
 
-33. run to add maps
+34. run to add maps
 
     `npm install --save @types/googlemaps`
 
-34. inside body of index.html after app-root
+35. inside body of index.html after app-root
 
     `<script async defer src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=geometry,drawing,places" type="text/javascript"></script>`
 
-35. add at top to ts file
+36. add at top to ts file
 
     `/// <reference types="@types/googlemaps" />`
 
-36. add types in tsconfig.app.json and tsconfig.spec.json
+37. add types in tsconfig.app.json and tsconfig.spec.json
 
     `"googlemaps"`
 
-37. add pretty-quick formatter and keep
+38. add pretty-quick formatter and keep
 
     `npm install --save prettier pretty-quick npm-run-all -D`
 
-38. add husky
+39. add husky
 
     `npm install husky --save-dev`
 
-39. hammerjs
+40. hammerjs
 
     `npm install hammerjs --save`
+
+41. Add store module in app.module
+
+    `StoreModule.forRoot(reducer)`
+
+42.

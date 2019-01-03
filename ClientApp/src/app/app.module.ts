@@ -8,7 +8,7 @@ import { NavMenuComponent } from "./home/nav-menu/nav-menu.component";
 import { LayoutModule } from "@angular/cdk/layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DashboardComponent } from "./home/dashboard/dashboard.component";
-import { MovieService } from "./shared/services/movie.service";
+import { MovieService } from "./movies/movie.service";
 import { MovieListComponent } from "./movies/movie-list/movie-list.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MovieEditComponent } from "./movies/movie-edit/movie-edit.component";
@@ -21,6 +21,9 @@ import { PageNotFoundComponent } from "./home/page-not-found.component";
 import { LocationComponent } from "./maps/location/location.component";
 import { LocationSearchComponent } from "./maps/location-search/location-search.component";
 import { AutocompleteComponent } from "./maps/autocomplete/autocomplete.component";
+import { RoutesComponent } from "./maps/routes/routes.component";
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { AutocompleteComponent } from "./maps/autocomplete/autocomplete.componen
     PageNotFoundComponent,
     LocationComponent,
     LocationSearchComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    RoutesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,12 @@ import { AutocompleteComponent } from "./maps/autocomplete/autocomplete.componen
     BrowserAnimationsModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
+    }),
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      name: "angular demo devtools",
+      maxAge: 25,
+      logOnly: environment.production
     })
   ],
   providers: [MovieService],

@@ -100,8 +100,7 @@ export class LocationComponent implements OnInit {
     const newMarker = new google.maps.Marker({
       position: location,
       map: this.map,
-      draggable: false,
-      title: "You Loation!"
+      draggable: false
     });
     this.countMarkers++;
     label = this.countMarkers.toString();

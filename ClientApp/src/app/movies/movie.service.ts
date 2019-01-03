@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs"; // https://stackoverflow.com/questions/49840152/i-get-an-error-when-learning-angular-has-no-exported-member-observable
 
-import { Movie } from "../models/movie.model";
+import { Movie } from "./movie.model";
 
 @Injectable()
 export class MovieService {
