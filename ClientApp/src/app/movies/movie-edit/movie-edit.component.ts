@@ -1,11 +1,16 @@
 import { Component, OnInit, OnDestroy, OnChanges } from '@angular/core';
-import { Movie } from 'src/app/movies/movie.model';
+import { Movie } from '../movie.model';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../movie.service';
 import { FormBuilder } from '@angular/forms';
 
 import { GenericValidator } from '../../shared/generic-validator';
 import { NumberValidators } from '../../shared/numeric-validator';
+
+import * as fromMovie from './../state';
+import * as moviesActions from './../state/movie.actions';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-editmovie',
@@ -23,10 +28,14 @@ export class MovieEditComponent implements OnInit, OnChanges, OnDestroy {
   private validationMessages: { [key: string]: { [key: string]: string } };
   private genericValidator: GenericValidator;
 
+  movies$: Observable<Movie[]>;
+  errorMessages$: Observable<string>;
+
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
-    fb: FormBuilder
+    fb: FormBuilder,
+    private store: Store<fromMovie.State>
   ) {
     // Defines all of the validation messages for the form.
     // These could instead be retrieved from a file or database.
@@ -53,6 +62,9 @@ export class MovieEditComponent implements OnInit, OnChanges, OnDestroy {
         (err: any) => console.log(err),
         () => console.log('All done getting movie.')
       );
+
+    // this.movies$ = this.store.pipe(select(fromMovie.getMovies));
+    this.errorMessages$ = this.store.pipe(select(fromMovie.getError));
   }
 
   ngOnChanges() {}
@@ -60,6 +72,10 @@ export class MovieEditComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy() {}
 
   saveChanges(): void {
+    this.store.dispatch(
+      new moviesActions.UpdateMovieSuccess(this.selectedMovie)
+    );
+
     this.movieService
       .updateMovie(this.selectedMovie)
       .subscribe(
