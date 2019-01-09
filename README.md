@@ -160,4 +160,4 @@
 
     `StoreModule.forRoot(reducer)`
 
-42.
+42. Documentation extesntion: Document this 
