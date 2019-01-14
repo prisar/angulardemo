@@ -21,8 +21,84 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    <Content Remove="ClientApp5\.angular-cli.json" />
+    <Content Remove="ClientApp5\package-lock.json" />
+    <Content Remove="ClientApp5\package.json" />
+    <Content Remove="ClientApp5\tsconfig.json" />
+    <Content Remove="ClientApp5\tslint.json" />
+    <Content Remove="ClientApp5\src\tsconfig.app.json" />
+    <Content Remove="ClientApp5\src\tsconfig.spec.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ClientApp\dist\ClientApp\3rdpartylicenses.txt" />
+    <None Remove="ClientApp\dist\ClientApp\MaterialIcons-Regular.012cf6a10129e2275d79.woff" />
+    <None Remove="ClientApp\dist\ClientApp\MaterialIcons-Regular.570eb83859dc23dd0eec.woff2" />
+    <None Remove="ClientApp\dist\ClientApp\MaterialIcons-Regular.a37b0c01c0baf1888ca8.ttf" />
+    <None Remove="ClientApp\dist\ClientApp\MaterialIcons-Regular.e79bfd88537def476913.eot" />
+    <None Remove="ClientApp\dist\ClientApp\favicon.ico" />
+    <None Remove="ClientApp\dist\ClientApp\index.html" />
+    <None Remove="ClientApp\dist\ClientApp\ngsw-worker.js" />
+    <None Remove="ClientApp\dist\ClientApp\safety-worker.js" />
+    <None Remove="ClientApp\dist\ClientApp\worker-basic.min.js" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-128x128.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-144x144.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-152x152.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-192x192.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-384x384.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-512x512.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-72x72.png" />
+    <None Remove="ClientApp\dist\ClientApp\assets\icons\icon-96x96.png" />
+    <None Remove="ClientApp5\README.md" />
+    <None Remove="ClientApp5\karma.conf.js" />
+    <None Remove="ClientApp5\protractor.conf.js" />
+    <None Remove="ClientApp5\src\index.html" />
+    <None Remove="ClientApp5\src\main.ts" />
+    <None Remove="ClientApp5\src\polyfills.ts" />
+    <None Remove="ClientApp5\src\styles.css" />
+    <None Remove="ClientApp5\src\test.ts" />
+    <None Remove="ClientApp5\src\typings.d.ts" />
+    <None Remove="ClientApp5\src\app\app.component.css" />
+    <None Remove="ClientApp5\src\app\app.component.html" />
+    <None Remove="ClientApp5\src\app\app.component.ts" />
+    <None Remove="ClientApp5\src\app\app.module.ts" />
+    <None Remove="ClientApp5\src\app\components\addmovie\addmovie.component.css" />
+    <None Remove="ClientApp5\src\app\components\addmovie\addmovie.component.html" />
+    <None Remove="ClientApp5\src\app\components\addmovie\addmovie.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\components\addmovie\addmovie.component.ts" />
+    <None Remove="ClientApp5\src\app\components\editmovie\editmovie.component.css" />
+    <None Remove="ClientApp5\src\app\components\editmovie\editmovie.component.html" />
+    <None Remove="ClientApp5\src\app\components\editmovie\editmovie.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\components\editmovie\editmovie.component.ts" />
+    <None Remove="ClientApp5\src\app\components\home\home.component.html" />
+    <None Remove="ClientApp5\src\app\components\home\home.component.ts" />
+    <None Remove="ClientApp5\src\app\components\movies\movies.component.css" />
+    <None Remove="ClientApp5\src\app\components\movies\movies.component.html" />
+    <None Remove="ClientApp5\src\app\components\movies\movies.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\components\movies\movies.component.ts" />
+    <None Remove="ClientApp5\src\app\counter\counter.component.html" />
+    <None Remove="ClientApp5\src\app\counter\counter.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\counter\counter.component.ts" />
+    <None Remove="ClientApp5\src\app\employee-list\employee-list.component.css" />
+    <None Remove="ClientApp5\src\app\employee-list\employee-list.component.html" />
+    <None Remove="ClientApp5\src\app\employee-list\employee-list.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\employee-list\employee-list.component.ts" />
+    <None Remove="ClientApp5\src\app\fetch-data\fetch-data.component.html" />
+    <None Remove="ClientApp5\src\app\fetch-data\fetch-data.component.ts" />
+    <None Remove="ClientApp5\src\app\nav-menu\nav-menu.component.css" />
+    <None Remove="ClientApp5\src\app\nav-menu\nav-menu.component.html" />
+    <None Remove="ClientApp5\src\app\nav-menu\nav-menu.component.ts" />
+    <None Remove="ClientApp5\src\app\shared\models\employee.model.ts" />
+    <None Remove="ClientApp5\src\app\shared\models\movie.model.ts" />
+    <None Remove="ClientApp5\src\app\shared\services\movie.service.ts" />
+    <None Remove="ClientApp5\src\app\test\test.component.css" />
+    <None Remove="ClientApp5\src\app\test\test.component.html" />
+    <None Remove="ClientApp5\src\app\test\test.component.spec.ts" />
+    <None Remove="ClientApp5\src\app\test\test.component.ts" />
+    <None Remove="ClientApp5\src\assets\.gitkeep" />
+    <None Remove="ClientApp5\src\environments\environment.prod.ts" />
+    <None Remove="ClientApp5\src\environments\environment.ts" />
+  </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
@@ -43,7 +119,7 @@
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
       <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </ResolvedFileToPublish>

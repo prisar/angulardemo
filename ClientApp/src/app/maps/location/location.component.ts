@@ -129,7 +129,7 @@ export class LocationComponent implements OnInit {
     );
   }
 
-  findLocation(): void {
+  findLocation(e: any): void {
     this.geoService
       .getLocation(this.locationStr)
       .subscribe(
