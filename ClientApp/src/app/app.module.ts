@@ -25,6 +25,7 @@ import { RoutesComponent } from './maps/routes/routes.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MovieModule } from './movies/movie.module';
+import { ParentComponent } from './io/parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MovieModule } from './movies/movie.module';
     LocationComponent,
     LocationSearchComponent,
     AutocompleteComponent,
-    RoutesComponent
+    RoutesComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
