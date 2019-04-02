@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+
+export class Student{
+  name: string;
+}
 
 @Component({
   selector: 'app-parent',
@@ -6,6 +10,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
+
+  @Input()
+  ctMsg: string;
+
+  @Input('stdLeader')
+  myStdLeader: any;
+
+  @Output('addStudentEvent')
+  addStdEvent = new EventEmitter<Student>();
+
+  @Output()
+  sendMsgEvent = new EventEmitter<string>();
 
   constructor() { }
 

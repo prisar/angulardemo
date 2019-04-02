@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
 import { LocationComponent } from './maps/location/location.component';
 import { LocationSearchComponent } from './maps/location-search/location-search.component';
 import { RoutesComponent } from './maps/routes/routes.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path: 'moviesm',
     loadChildren: './movies/movie.module#MovieModule'
+  },
+  {
+    path: 'checkout', component: CheckoutComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

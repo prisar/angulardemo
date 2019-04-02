@@ -26,6 +26,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MovieModule } from './movies/movie.module';
 import { ParentComponent } from './io/parent/parent.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ParentComponent } from './io/parent/parent.component';
     LocationSearchComponent,
     AutocompleteComponent,
     RoutesComponent,
-    ParentComponent
+    ParentComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
