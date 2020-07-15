@@ -161,3 +161,7 @@
     `StoreModule.forRoot(reducer)`
 
 42. Documentation extesntion: Document this 
+
+43. Add PWA features
+
+   `ng add @angular/pwa`
