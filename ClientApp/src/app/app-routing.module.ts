@@ -9,6 +9,8 @@ import { LocationComponent } from './maps/location/location.component';
 import { LocationSearchComponent } from './maps/location-search/location-search.component';
 import { RoutesComponent } from './maps/routes/routes.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PostsComponent } from './posts/posts/posts.component';
+import { PostComponent } from './posts/post/post.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -25,6 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'checkout', component: CheckoutComponent
+  },
+  {
+    path: 'posts', component: PostsComponent
+  },
+  {
+    path: 'post/:id', component: PostComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

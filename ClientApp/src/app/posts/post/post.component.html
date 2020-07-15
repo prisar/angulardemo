@@ -1,0 +1,12 @@
+<p>{{ post.title }}</p>
+<p>{{ post.body }}</p>
+<br />
+{{ user.name }} <br />
+{{ user.address.city }} <br />
+{{ user.email }} <br />
+{{ user.phone }}
+
+<hr />
+<div *ngFor="let comment of comments">
+  {{ comment.body }}
+</div>

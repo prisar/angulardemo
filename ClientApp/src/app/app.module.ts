@@ -27,6 +27,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MovieModule } from './movies/movie.module';
 import { ParentComponent } from './io/parent/parent.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PostsComponent } from './posts/posts/posts.component';
+import { PostComponent } from './posts/post/post.component';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AutocompleteComponent,
     RoutesComponent,
     ParentComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
       maxAge: 25,
       logOnly: environment.production
     }),
-    MovieModule // remove
+    MovieModule, // remove
+    Ng2SearchPipeModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

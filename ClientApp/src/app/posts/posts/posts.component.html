@@ -1,0 +1,19 @@
+
+<div class="container text-center">
+  <h1>Posts</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+    </div>
+    <ul>
+      <li *ngFor="let post of posts | filter:searchText">
+        <a [routerLink]="['/post', post.id]">{{post.title}}</a>
+        <p>   {{post.body}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
