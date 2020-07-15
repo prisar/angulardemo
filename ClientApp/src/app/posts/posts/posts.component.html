@@ -9,7 +9,7 @@
     </div>
     <ul>
       <li *ngFor="let post of posts | filter:searchText">
-        <a [routerLink]="['/post', post.id]">{{post.title}}</a>
+        <a [routerLink]="['/posts', post.id]">{{post.title}}</a>
         <p>   {{post.body}}</p>
       </li>
     </ul>

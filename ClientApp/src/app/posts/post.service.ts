@@ -24,9 +24,10 @@ export class PostService {
   }
 
   getPostById(id: number): Observable<Post> {
-    const posts = JSON.parse(localStorage.getItem('posts'));
-    const post = posts.find(p => p.id === id);
-    return of(post);
+    const post = this.http.get<Post>(
+      "https://jsonplaceholder.typicode.com/posts/" + id
+    );
+    return post;
   }
 
   getUserDetailsById(id: number): Observable<User> {
@@ -37,48 +38,25 @@ export class PostService {
   }
 
   getCommentsByPostId(id: number): Observable<Comment[]> {
-    if (!localStorage.getItem("comments")) {
-      localStorage.setItem("comments", JSON.stringify([]));
-    }
+    // if (!localStorage.getItem("comments")) {
+    //   localStorage.setItem("comments", JSON.stringify([]));
+    // }
 
-    const localComments = JSON.parse(localStorage.getItem("comments")).find(comment => comment.postId);
-    if (localComments === undefined && localComments.length === 0) {
-      const comments = this.http.get<Comment[]>(
-        `https://jsonplaceholder.typicode.com/posts/${id}/comments`
-      );
-      console.log('comments', comments);
-      return comments;
-    }
-    return of(localComments);
+    // const localComments = JSON.parse(localStorage.getItem("comments")).filter(comment => comment.postId);
+    // console.log('localComments', localComments);
+    // if (localComments === undefined || localComments.length === 0) {
+    //   const comments = this.http.get<Comment[]>(
+    //     `https://jsonplaceholder.typicode.com/posts/${id}/comments`
+    //   );
+    //   console.log('comments', comments);
+    //   return comments;
+    // }
+    // return of(localComments);
+
+    const comments = this.http.get<Comment[]>(
+      `https://jsonplaceholder.typicode.com/posts/${id}/comments`
+    );
+    console.log('comments', comments);
+    return comments;
   }
-
-  // updatePost(Post: Post): Observable<void> {
-  //   return this.http.put<void>(
-  //     "https://dxPostsapi.azurewebsites.net/api/v1/Posts/" + Post.id,
-  //     Post,
-  //     {
-  //       headers: new HttpHeaders({
-  //         "Content-Type": "application/json"
-  //       })
-  //     }
-  //   );
-  // }
-
-  // addPost(newPost: Post): Observable<Post> {
-  //   return this.http.post<Post>(
-  //     "https://dxPostsapi.azurewebsites.net/api/v1/Posts/",
-  //     newPost,
-  //     {
-  //       headers: new HttpHeaders({
-  //         "Content-Type": "application/json"
-  //       })
-  //     }
-  //   );
-  // }
-
-  // deletePost(PostId: number): Observable<void> {
-  //   return this.http.delete<void>(
-  //     `https://dxPostsapi.azurewebsites.net/api/v1/Posts/${PostId}`
-  //   );
-  // }
 }

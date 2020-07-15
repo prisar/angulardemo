@@ -32,7 +32,7 @@ const routes: Routes = [
     path: 'posts', component: PostsComponent
   },
   {
-    path: 'post/:id', component: PostComponent
+    path: 'posts/:id', component: PostComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -1,12 +1,21 @@
-<p>{{ post.title }}</p>
-<p>{{ post.body }}</p>
+<div *ngIf="post">
+  <p>{{ post.title }}</p>
+  <p>{{ post.body }}</p>
+</div>
 <br />
-{{ user.name }} <br />
-{{ user.address.city }} <br />
-{{ user.email }} <br />
-{{ user.phone }}
+<div *ngIf="user">
+  {{ user.name }} <br />
+  {{ user.address.city }} <br />
+  {{ user.email }} <br />
+  {{ user.phone }}
+</div>
 
 <hr />
-<div *ngFor="let comment of comments">
-  {{ comment.body }}
+<div *ngFor="let comment of comments; let i = index;">
+  <h3>Comment {{ i+1 }}</h3>
+  <p>{{ comment.body }}</p>
+</div>
+<div>
+  <input type="text" [(ngModel)]="commentText" />
+  <button color="primary" (click)="addComment($event)"> Add Comment</button>
 </div>
